@@ -1,0 +1,128 @@
+.main {
+    .regblock {
+        &__label {
+            margin: 81px 0 41px;
+            text-align: center;
+            color: #000;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-size: 32px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .regform {
+            max-width: 620px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+
+            input[type="text"],
+            input[type="password"] {
+                max-width: 620px;
+                width: 100%;
+                height: 59px;
+                padding-left: 31px;
+                font-size: 18px;
+                font-weight: 600;
+                background-color: transparent;
+                border-radius: 15px;
+                border: 1px solid $lightBrown;
+
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+            .regform__label-acc-exists {
+                display: none;
+                width: 164px;
+                margin: -15px 0 5px;
+                margin-right: 100%;
+                color: red;
+            }
+
+            .checkbox-container {
+                width: 303px;
+                margin: 11px 0 15px 0;
+                padding-left: 30px;
+                font-size: 14px;
+                font-weight: 600;
+
+                input[type="checkbox"] {
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    vertical-align: middle;
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                    color: $lightBrown;
+                    position: relative;
+                    background-color: white;
+                    border: 1px solid #000;
+                    border-radius: 4px;
+                    outline: $lightBrown;
+                    cursor: pointer;
+                    &:checked {
+                        border: none;
+                        background-color: $lightBrown;
+                        &::before {
+                            content: "🗸";
+                            font-size: 16px;
+                            color: white;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                }
+                a {
+                    color: $lightBrown;
+                }
+            }
+
+            .submitreg {
+                display: block;
+                margin: 53px auto 0 auto;
+                max-width: 310px;
+                width: 100%;
+                height: 59px;
+                font-size: 24px;
+                font-weight: 600;
+                color: $mainGrey;
+                background-color: $mainBrown;
+                border-radius: 15px;
+
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            }
+
+            p {
+                margin-top: 11px;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 600;
+                a {
+                    position: relative;
+                    display: inline-block;
+                    color: $lightBrown;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        bottom: -4px; /* Измените это значение, чтобы поднять или опустить подчеркивание */
+                        left: 0;
+                        background-color: $lightBrown; /* Замените $lightBrown на цвет вашего выбора */
+                        z-index: -1; /* Добавлено свойство z-index */
+                        transform: scaleX(0);
+                        transition: all 0.3s ease-in-out 0s;
+                    }
+
+                    &:hover:before {
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+    }
+}

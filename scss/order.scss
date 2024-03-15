@@ -1,0 +1,221 @@
+@import "starter";
+
+.main {
+    max-width: 1400px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    .main-container._container {
+        padding: 0 20px;
+        .orderform {
+            margin-top: 61px;
+            &__category {
+                .dropdown {
+                    position: relative;
+                    width: 355px;
+                    height: 44px;
+                    margin: 17px 0 0 0;
+                    .dropbtn {
+                        position: initial;
+                        font-size: 16px;
+                        outline: none;
+                        color: $mainBrown;
+                        background-color: transparent;
+                        border: 1px solid $lightBrown;
+                        cursor: pointer;
+
+                        i {
+                            margin-left: 5px;
+                            color: #000;
+                        }
+                    }
+
+                    .dropdown-content {
+                        display: none;
+                        position: absolute;
+                        margin-top: 5px;
+                        background-color: $mainGrey;
+                        border: 1px solid $mainBrown;
+                        border-radius: 5px;
+                        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                        z-index: 1;
+
+                        li {
+                            padding: 12px;
+                            text-align: left;
+                            border-radius: 5px;
+                            cursor: pointer;
+
+                            &:hover {
+                                background-color: #f1f1f1;
+                            }
+                        }
+                    }
+
+                    &.show-content .dropdown-content {
+                        display: block;
+                    }
+                }
+            }
+
+            &__details {
+                .miniform {
+                    max-width: 690px;
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 21px 0 0 69px;
+                    .form-row {
+                        max-width: 621px;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        &:not(:last-child) {
+                            margin-bottom: 21px;
+                        }
+                        label {
+                            height: 44px;
+                            flex: 1;
+                            margin-right: 71px;
+                        }
+                        input {
+                            flex: 2;
+                        }
+
+                        #detailedDescription {
+                            height: 132px;
+                            padding: 5px 10px;
+                            word-wrap: break-word;
+                            overflow: hidden;
+
+                            vertical-align: top;
+                            resize: none;
+                        }
+                    }
+                }
+            }
+
+            &__date {
+                input {
+                    margin: 11px 0 0 69px;
+                    outline: none;
+                    border: 1px solid $lightBrown;
+                    border-radius: 5px;
+                    background-color: transparent;
+                }
+            }
+
+            &__payment {
+                padding-bottom: 0 !important;
+                border-bottom: none !important;
+                .form-row {
+                    display: flex;
+                    margin: 21px 0 21px 69px;
+                    label {
+                        max-width: 147px;
+                        width: 100%;
+                    }
+                    .price-input {
+                        max-width: 109px;
+                        width: 100%;
+                        padding-left: auto;
+                        border-radius: 5px;
+                        border: 1px solid $lightBrown;
+                        color: $lightBrown;
+                        font-size: 18px;
+                        font-weight: 500;
+                        text-align: center;
+                        background-color: transparent;
+                    }
+                    p {
+                        margin: auto 0 auto 9px;
+                        color: $mainBrown;
+                        font-size: 18px;
+                        font-weight: 300;
+                    }
+                }
+                .checkbox-container {
+                    display: flex;
+                    margin: 21px 0 21px 69px;
+
+                    input[type="checkbox"] {
+                        appearance: none;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 5px;
+                        color: $lightBrown;
+                        background-color: white;
+                        outline: $lightBrown;
+                        border: 1px solid $mainBrown;
+                        background-color: transparent;
+                        cursor: pointer;
+                        &:checked {
+                            border: none;
+                            background-color: $lightBrown;
+                            &::before {
+                                content: "🗸";
+                                font-size: 16px;
+                                color: white;
+                                padding-left: 3.5px;
+                            }
+                        }
+                    }
+                    .checkbox-label {
+                        margin-left: 13px;
+                        vertical-align: middle;
+                        color: $lightBrown;
+                        font-size: 18px;
+                        font-weight: 300;
+                    }
+                }
+            }
+
+            .section {
+                width: 100%;
+                &:not(:last-child) {
+                    padding: 0 20px 41px 0;
+                }
+                border-bottom: 1px solid #d9d9d9;
+                .sectiontitle {
+                    margin-top: 21px;
+                    color: #000;
+                    font-size: 32px;
+                    font-weight: 500;
+                }
+                label {
+                    color: #000;
+                    font-size: 18px;
+                    font-weight: 300;
+                }
+                input[type="text"],
+                textarea {
+                    max-width: 355px;
+                    padding: 0 10px;
+                    width: 100%;
+                    height: 44px;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    border: 1px solid $lightBrown;
+                    background-color: transparent;
+                }
+            }
+        }
+        button {
+            max-width: 390px;
+            width: 100%;
+            height: 44px;
+            position: absolute;
+            top: 92%;
+            right: 14.5%;
+            border-radius: 5px;
+            border: 1px solid $lightBrown;
+            color: $mainGrey;
+            font-size: 18px;
+            font-weight: 500;
+            background-color: $mainBrown;
+        }
+    }
+}

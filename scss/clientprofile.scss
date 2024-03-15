@@ -1,0 +1,211 @@
+@import "reset";
+@import "header";
+@import "modal";
+
+.main {
+    ._container {
+        max-width: 1440px;
+        width: 100%;
+        padding: 0 20px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .mainblock {
+            max-width: 1436px;
+            width: 100%;
+            height: 672px;
+            display: flex;
+            margin-top: 80px;
+            .leftsideblock {
+                max-width: 360px;
+                width: 100%;
+                height: 672px;
+                color: $mainGrey;
+                background-color: $mainBrown;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                &__caption {
+                    padding: 30px 103px 0 112px;
+                    color: $mainGrey;
+                    font-size: 24px;
+                    font-weight: 500;
+                }
+
+                &__list {
+                    padding: 64px 39px 339px 40px;
+
+                    .list__item {
+                        position: relative;
+                        max-width: 280px;
+                        width: 100%;
+                        text-align: left;
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: $mainGrey;
+
+                        &:not(:last-child) {
+                            margin-bottom: 40px;
+                        }
+
+                        &:hover {
+                            color: $lightGrey;
+                        }
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            width: 4px;
+                            height: 30px;
+                            margin-top: -1.5%;
+                            margin-left: -14.2%;
+                            background-color: $lightGrey;
+                            border-top-right-radius: 2px;
+                            border-bottom-right-radius: 2px;
+                            display: none;
+                        }
+                    }
+                    .active {
+                        color: $lightGrey;
+                        &::before {
+                            display: block;
+                        }
+                    }
+                }
+
+                &__exit {
+                    margin-left: 41px;
+                    color: $mainGrey;
+                    font-size: 20px;
+                    font-weight: 500;
+                    &:hover {
+                        color: $lightGrey;
+                    }
+                }
+            }
+            .rightsideblock {
+                max-width: 1076px;
+                width: 100%;
+                padding-top: 59px;
+                color: $mainBrown;
+                background-color: $lightGrey;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+
+                &__profilepic {
+                    width: 133px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    img {
+                        width: 97px;
+                        height: 97px;
+                        border-radius: 15px;
+                    }
+                    .changephotobtn {
+                        margin-top: 5px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: $lightBrown;
+                    }
+                }
+
+                form {
+                    width: 100%;
+                    margin: 40px auto 0 auto;
+                    padding: 0 20px;
+                    .form-group {
+                        label {
+                            display: inline-block;
+                            text-align: right;
+                            font-size: 18px;
+                            font-weight: 600;
+                        }
+
+                        .input-wrapper {
+                            display: inline-block;
+                            width: calc(100% - 170px);
+                            position: relative;
+
+                            input {
+                                max-width: 521px;
+                                width: 100%;
+                                height: 32px;
+                                box-sizing: border-box;
+                                padding-left: 20px;
+                                margin-bottom: 30px;
+                                font-size: 14px;
+                                font-weight: 500;
+                                color: $mainBrown;
+                                background-color: transparent;
+                                border-radius: 5px;
+                                border: 1px solid $lightBrown;
+                                transition: border-color 0.3s ease;
+                                &::placeholder {
+                                    color: rgba(46, 43, 41, 0.5);
+                                }
+                            }
+
+                            .input-button {
+                                width: 0;
+                                height: 32px;
+                                display: inline-block;
+                                margin-left: 40px;
+                                border-radius: 5px;
+                                border: 1px solid $lightBrown;
+                                opacity: 0;
+                                transition:
+                                    background-color 0.3s ease,
+                                    width 0.3s ease,
+                                    opacity 0.3s ease;
+                                &:hover {
+                                    background-color: $lightBrown;
+                                    color: $mainGrey;
+                                }
+                            }
+
+                            input:not(:placeholder-shown):focus + .input-button {
+                                width: 114px;
+                                opacity: 1;
+                            }
+
+                            .icon {
+                                background: url("../img/icons/pencil.svg") no-repeat;
+                                background-size: contain;
+                                width: 16px;
+                                height: 16px;
+                                display: inline-block;
+                                position: absolute;
+                                margin-left: 20px;
+                                transform: translateY(37%);
+                            }
+                        }
+                    }
+                }
+                &__profile-form {
+                    max-width: 890px;
+                    .form-group {
+                        label {
+                            width: 90px;
+                            margin-right: 40px;
+                        }
+                    }
+                }
+
+                &__changepass-form {
+                    max-width: 932px;
+                    display: none;
+                    .form-group {
+                        label {
+                            width: 152px;
+                            margin-right: 13px;
+                        }
+                    }
+                }
+
+                &__orders-list {
+                    display: none;
+                }
+            }
+        }
+    }
+}

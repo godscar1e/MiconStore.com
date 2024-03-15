@@ -1,0 +1,181 @@
+.main {
+    ._container {
+        max-width: 1440px;
+        width: 100%;
+        padding: 0 20px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .main__bg {
+            max-width: 1400px;
+            width: 100%;
+            height: 580px;
+        }
+
+        &__center-rect {
+            max-width: 1400px;
+            width: 100%;
+            height: 101px;
+            margin-top: 15px;
+            background-color: $lightGrey;
+        }
+
+        .grid-container {
+            display: grid;
+            margin-top: 21px;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 21px 76px;
+            .order-type {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 101px;
+                p {
+                    margin-left: 15px;
+                    text-align: left;
+                    font-family: Montserrat;
+                    font-size: 20px;
+                    color: #000;
+                }
+            }
+        }
+
+        .howweworkblock {
+            max-width: 1158px;
+            width: 100%;
+            margin: 42px auto 0 auto;
+            padding: 21px;
+            text-align: center;
+            border-top: 1px solid $lightGrey;
+            &__label {
+                color: $lightBrown;
+                font-size: 32px;
+                font-weight: 400;
+            }
+
+            .ordersteps {
+                display: grid;
+                margin-top: 41px;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(1, 330px);
+                gap: 78px;
+                padding-bottom: 41px;
+                border-bottom: 1px solid $lightGrey;
+                &__step {
+                    // width: 100%;
+                    // height: 100%;
+                    img {
+                    }
+                    h2 {
+                        margin-top: 21px;
+                        font-size: 24px;
+                        font-weight: 500;
+                        color: #000;
+                    }
+                    h3 {
+                        margin-top: 5px;
+                        font-size: 14px;
+                        font-weight: 300;
+                        color: #000;
+                    }
+                }
+            }
+        }
+
+        .search {
+            margin-top: 41px;
+            text-align: center;
+            &__label {
+                font-size: 32px;
+                font-weight: 400;
+                font-style: normal;
+                color: $lightBrown;
+            }
+            &__bar {
+                margin-top: 20px;
+                input {
+                    max-width: 730px;
+                    width: 100%;
+                    height: 41px;
+                    padding-left: 20px;
+                    background-color: transparent;
+                    border-radius: 5px;
+                    border: 1px solid $mainBrown;
+                }
+            }
+        }
+
+        .helpblock {
+            margin-top: 61px;
+            img {
+                max-width: 1400px;
+                width: 100%;
+                height: 380px;
+            }
+            &__caption {
+                position: relative;
+                margin-top: -325px;
+                max-width: 506px;
+                width: 100%;
+                height: 271px;
+                padding: 41px 62px 41px 69px;
+                background-color: $mainGrey;
+                border-top-right-radius: 18px;
+                border-bottom-right-radius: 18px;
+                h1 {
+                    color: $lightBrown;
+                    font-size: 32px;
+                    font-weight: 500;
+                }
+                h3 {
+                    margin-top: 11px;
+                    color: $lightBrown;
+                    font-size: 14px;
+                    font-weight: 300;
+                }
+                button {
+                    margin-top: 22px;
+                    max-width: 197px;
+                    width: 100%;
+                    height: 44px;
+                    border-radius: 15px;
+                    color: $mainGrey;
+                    background-color: $lightBrown;
+                }
+            }
+        }
+
+        .orderlink {
+            width: 500px;
+            margin: 70px auto 21px auto;
+            font-size: 18px;
+            font-weight: 400;
+
+            a {
+                text-decoration: none;
+                color: $lightBrown;
+                position: relative;
+                display: inline-block;
+                padding-bottom: 0.8%;
+                cursor: pointer;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    bottom: -4px;
+                    left: 0;
+                    background-color: $lightBrown;
+                    z-index: -1;
+                    transform: scaleX(0);
+                    transition: all 0.3s ease-in-out 0s;
+                }
+
+                &:hover:before {
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+}

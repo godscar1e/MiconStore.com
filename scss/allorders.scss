@@ -1,0 +1,131 @@
+@import "reset";
+@import "header";
+@import "modal";
+
+main {
+    .main-container {
+        max-width: 1440px;
+        width: 100%;
+        padding: 0 20px;
+        margin-left: auto;
+        margin-right: auto;
+        .mainbody {
+            margin-top: 61px;
+            &__upper {
+                width: 100%;
+                padding-bottom: 17px;
+                border-bottom: 1px solid $borderColor;
+                h1 {
+                    font-weight: 500;
+                    font-size: 32px;
+                    color: #000;
+                    label {
+                        color: $lightBrown;
+                    }
+                }
+            }
+            .ordersbody {
+                display: flex;
+
+                .orders {
+                    .order {
+                        display: flex;
+                        max-width: 919px;
+                        width: 100%;
+                        margin-top: 31px;
+                        padding-bottom: 31px;
+                        border-bottom: 1px solid $borderColor;
+                        .order-img {
+                            width: 150px;
+                            height: 150px;
+                            border-radius: 50%;
+                        }
+                        .orderinfo {
+                            max-width: 568px;
+                            width: 100%;
+                            margin-left: 21px;
+                            &__name {
+                            }
+                            &__caption {
+                                margin-top: 11px;
+                            }
+                        }
+                        &__price {
+                            margin-top: 152px;
+                            margin-left: 64px;
+                            font-size: 32px;
+                            font-weight: 500;
+                            color: #000;
+                        }
+                    }
+                }
+
+                &__filters {
+                    margin: 31px 0 0 143px;
+
+                    h2 {
+                        color: #000;
+                        font-size: 32px;
+                        font-weight: 500;
+                    }
+
+                    .dropbtn {
+                        width: 90px;
+                        margin: 17px 0 0 1px;
+                        color: $mainBrown;
+                        font-size: 20px;
+                        font-weight: 500;
+                        border: none;
+                        text-align: left;
+                        cursor: pointer;
+
+                        &::after {
+                            content: "\203A";
+                            vertical-align: middle;
+                            display: inline-block;
+                            position: absolute;
+                            transform: rotate(-90deg);
+                            margin-left: 5%;
+                        }
+                    }
+
+                    .dropdown {
+                        position: relative;
+                        display: block;
+
+                        .dropdown-content {
+                            display: block;
+                            position: relative;
+                            background-color: transparent;
+                            min-width: 212px;
+                            width: 100%;
+                            z-index: 1;
+
+                            a {
+                                display: block;
+                                padding-top: 11px;
+                                color: $lightBrown;
+                                font-size: 18px;
+                                font-weight: 500;
+                                text-decoration: none;
+
+                                &:hover {
+                                    background-color: #f1f1f1;
+                                }
+                            }
+                            &.locked {
+                                display: none;
+
+                                .dropbtn::after {
+                                    transform: rotate(90deg);
+                                }
+                            }
+                        }
+
+                        // Show dropdown menu style
+                    }
+                }
+            }
+        }
+    }
+}

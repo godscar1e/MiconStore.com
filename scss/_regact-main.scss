@@ -1,0 +1,49 @@
+.main {
+    &__title {
+        margin: 81px 0;
+        text-align: center;
+        color: #000;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    .mainbttns {
+        display: flex;
+        justify-content: center;
+        // flex-wrap: wrap;
+        gap: 8.28%;
+        &__specialist-button {
+            img {
+                max-width: 463px;
+                width: 100%;
+                max-height: 630px;
+            }
+
+            .label {
+                margin: -87px auto 0 auto;
+                max-width: 442px;
+                width: 100%;
+                max-height: 77px;
+                height: 100%;
+                background-color: rgba(46, 43, 41, 0.75);
+                backdrop-filter: blur(2px);
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
+
+                p {
+                    color: $mainGrey;
+                    font-size: 32px;
+                    font-weight: 500;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+    }
+    .howweworkblock {
+        &__squares {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 20px !important;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .howweworkblock {
+        &__squares {
+            grid-template-columns: 1fr;
+        }
+    }
+}
